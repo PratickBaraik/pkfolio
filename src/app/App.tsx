@@ -1,22 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AudioProvider } from "../context/AudioContext";
-
 import HomePage from "../pages/home/Home";
 import Works from "../pages/work/Work";
 import Contact from "../pages/contact/Contact";
 import GearList from "../pages/gearlist/Gearlist";
 import About from "../pages/about/About";
 import Project from "../pages/project/Project";
-
-// import Gearlist from "@/features/gearlist/Gearlist";
-
-/*
-App component
-
-Responsibilities
-- Global providers
-- Router configuration
-*/
 
 export default function App() {
   return (
