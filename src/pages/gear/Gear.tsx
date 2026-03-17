@@ -1,6 +1,6 @@
 import NavBar from "../../components/molecule/Navbar";
 import Footer from "../../components/molecule/Footer";
-import GearListMain from "../../components/organisms/gearlist/GearListMain";
+import GearMain from "../../components/organisms/gear/GearMain";
 
 type NavItem = {
   label: string;
@@ -19,7 +19,7 @@ const GearList = () => {
   return (
     <>
       <NavBar brand="Prakashit Kujur" links={navLinks} />
-      <GearListMain />
+      <GearMain />
       <Footer />
     </>
   );

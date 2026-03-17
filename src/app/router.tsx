@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "../pages/home/Home";
 import Works from "../pages/work/Work";
 import Contact from "../pages/contact/Contact";
-import GearList from "../pages/gearlist/GearList";
+import GearList from "../pages/gear/Gear";
 import About from "../pages/about/About";
 import NotFound from "../pages/notFound/NotFound";
 import DroneProject from "../pages/project/droneProject/DroneMain";
