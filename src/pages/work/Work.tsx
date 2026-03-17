@@ -30,7 +30,7 @@ const Works: React.FC = () => {
   return (
     <>
       {/* Navigation */}
-      <Navbar brand="PK Portfolio" links={navLinks} />
+      <Navbar brand="Prakashit Kujur" links={navLinks} />
 
       {/* Work showcase section */}
       <WorkSection />

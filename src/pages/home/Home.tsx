@@ -44,7 +44,7 @@ const HomePage: React.FC = () => {
   return (
     <>
       {/* Navigation */}
-      <NavBar brand="PK Portfolio" links={navLinks} />
+      <NavBar brand="Prakashit Kujur" links={navLinks} />
 
       {/* Main landing canvas */}
       <MainSection />

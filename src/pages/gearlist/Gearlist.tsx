@@ -18,7 +18,7 @@ const GearList = () => {
 
   return (
     <>
-      <NavBar brand="PK Portfolio" links={navLinks} />
+      <NavBar brand="Prakashit Kujur" links={navLinks} />
       <GearListMain />
       <Footer />
     </>

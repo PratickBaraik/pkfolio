@@ -10,23 +10,21 @@ import li from "./social/linkedin.png";
  * Footer Component
  * Tailwind CSS version
  *
- * Improvements:
- * - DRY principle for repeated Tailwind classes
- * - Reusable class constants
- * - grayscale hover effect for social icons
+ * Improvements applied:
+ * - Same container system as Navbar (max-w-7xl + px-6)
+ * - Consistent horizontal alignment across the site
+ * - Responsive behavior preserved
  */
 
 const Footer = () => {
   /**
    * Reusable navigation link style
-   * Keeps navigation consistent and maintainable
    */
   const navLinkClass =
     "text-white text-[clamp(0.85rem,0.9vw,1rem)] opacity-90 px-2 py-1 transition-all duration-200 hover:opacity-60 hover:-translate-y-[1px]";
 
   /**
-   * Reusable social icon style
-   * Provides smooth hover animation + grayscale effect
+   * Social icon hover animation
    */
   const socialIconClass =
     "w-[clamp(22px,2.5vw,30px)] transition-all duration-300 ease-out hover:-translate-y-[2px] hover:grayscale";
@@ -36,13 +34,15 @@ const Footer = () => {
       {/* TOP SECTION */}
       <div
         className="
+        mx-auto
         w-full
+        max-w-7xl
         grid
         grid-cols-1
         md:grid-cols-[1fr_auto]
         items-center
         gap-[clamp(1.5rem,3vw,3rem)]
-        px-[clamp(1.5rem,5vw,6rem)]
+        px-6
         py-[clamp(1.5rem,4vw,3rem)]
         "
       >
@@ -89,8 +89,10 @@ const Footer = () => {
           <nav>
             <ul
               className="
-              flex flex-wrap
+              flex
+              flex-wrap
               gap-[clamp(0.6rem,1.4vw,1.1rem)]
+              sm:gap-4
               "
             >
               <li>
@@ -132,6 +134,7 @@ const Footer = () => {
           flex
           items-center
           justify-start
+          sm:justify-start
           md:justify-end
           gap-[clamp(0.8rem,2vw,1.6rem)]
           "
@@ -187,27 +190,20 @@ const Footer = () => {
       </div>
 
       {/* BOTTOM SECTION */}
-      <div
-        className="
-        w-full
-        bg-black
-        flex
-        justify-center
-        items-center
-        py-[clamp(1rem,2vw,1.5rem)]
-        "
-      >
-        <p
-          className="
-          text-white
-          text-center
-          text-[clamp(0.8rem,0.9vw,0.95rem)]
-          leading-relaxed
-          "
-        >
-          &copy; {new Date().getFullYear()} Prakashit Kujur. All rights
-          reserved.
-        </p>
+      <div className="w-full bg-black">
+        <div className="mx-auto max-w-7xl px-6 py-[clamp(1rem,2vw,1.5rem)] flex justify-center items-center">
+          <p
+            className="
+            text-white
+            text-center
+            text-[clamp(0.8rem,0.9vw,0.95rem)]
+            leading-relaxed
+            "
+          >
+            &copy; {new Date().getFullYear()} Prakashit Kujur. All rights
+            reserved.
+          </p>
+        </div>
       </div>
     </section>
   );

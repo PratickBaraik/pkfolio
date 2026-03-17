@@ -1,6 +1,6 @@
 import NavBar from "../../components/molecule/Navbar";
 import Footer from "../../components/molecule/Footer";
-import ProjectsMain from "../../components/organisms/projects/ProjectsMain";
+import AboutMain from "../../components/organisms/about/AboutMain";
 
 type NavItem = {
   label: string;
@@ -18,8 +18,8 @@ const About = () => {
 
   return (
     <>
-      <NavBar brand="PK Portfolio" links={navLinks} />
-      <ProjectsMain />
+      <NavBar brand="Prakashit Kujur" links={navLinks} />
+      <AboutMain />
       <Footer />
     </>
   );

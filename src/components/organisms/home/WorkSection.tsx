@@ -1,127 +1,162 @@
-import cine_work from "./assets/cinematics_work.jpg";
-import video_work from "./assets/photo_work.jpg";
-import drone_work from "./assets/drone_work.png";
+import { Link } from "react-router-dom";
+import CineWork from "./assets/cinematics.jpg";
+import PhotoWork from "./assets/photo.jpg";
+import DroneWork from "./assets/drone.png";
 
-const Work_Section = () => {
+/**
+ * Work item type definition
+ */
+type WorkItem = {
+  title: string;
+  img: string;
+  alt: string;
+  link: string;
+};
+
+const WorkSection = () => {
+  /**
+   * Data-driven works array
+   */
+  const works: WorkItem[] = [
+    {
+      title: "Cinematography",
+      img: CineWork,
+      alt: "Prakashit doing cinematography work",
+      link: "/cinematography",
+    },
+    {
+      title: "Photography",
+      img: PhotoWork,
+      alt: "Prakashit doing photography work",
+      link: "/gallery",
+    },
+    {
+      title: "Drone Footage",
+      img: DroneWork,
+      alt: "Prakashit doing drone footage work",
+      link: "/drone",
+    },
+  ];
+
   return (
-    <section className="w-full">
-      {/* HEADING */}
-      <h1
-        className="
-        mt-12
-        text-center
-        font-semibold
-
-        text-[clamp(1.8rem,3vw+0.5rem,4rem)]
-        mb-[clamp(1rem,3vw,2rem)]
-        "
-      >
-        Area of Work
-      </h1>
-
-      {/* GRID */}
-      <div
-        className="
-        w-full
-
-        grid
-        grid-cols-[repeat(auto-fit,minmax(250px,1fr))]
-
-        gap-[clamp(1rem,3vw,2rem)]
-
-        px-[clamp(2rem,5vw,4rem)]
-        pb-[clamp(2rem,5vw,4rem)]
-        "
-      >
-        {/* CARD 1 */}
-        <div
+    <section className="w-full py-16 transition-colors duration-300">
+      {/* Consistent Container */}
+      <div className="mx-auto max-w-7xl px-6">
+        {/* Heading */}
+        <h1
           className="
-          flex flex-col items-center justify-center
-
-          p-8
-
-          w-full
-          aspect-[3/4]
-
-          group
+          text-center
+          font-semibold
+          leading-tight
+          tracking-tight
+          text-[clamp(2rem,3vw+0.5rem,3.8rem)]
+          text-neutral-700
+          dark:text-neutral-100
+          transition-colors duration-300
           "
         >
-          <img
-            src={cine_work}
-            alt="Prakashit doing cinematography work"
-            className="
-            w-full h-full
-            object-cover
+          Body of Work
+        </h1>
 
-            transition-transform duration-300 ease-in-out
-            group-hover:scale-105
-            cursor-pointer
-            "
-          />
-
-          <h2 className="pt-4 text-lg font-medium">Cinematography</h2>
-        </div>
-
-        {/* CARD 2 */}
+        {/* Work Grid */}
         <div
           className="
-          flex flex-col items-center justify-center
-
-          p-8
-
-          w-full
-          aspect-[3/4]
-
-          group
+          mt-14
+          grid
+          grid-cols-1
+          sm:grid-cols-2
+          lg:grid-cols-3
+          gap-8
           "
         >
-          <img
-            src={video_work}
-            alt="Prakashit doing videography work"
-            className="
-            w-full h-full
-            object-cover
+          {works.map((work) => (
+            <Link
+              key={work.title}
+              to={work.link}
+              className="
+              group
+              relative
+              overflow-hidden
+              rounded-2xl
+              aspect-[3/4]
+              cursor-pointer
+              block
+              "
+            >
+              {/* Image */}
+              <img
+                src={work.img}
+                alt={work.alt}
+                className="
+                w-full
+                h-full
+                object-cover
+                transition-transform
+                duration-700
+                ease-out
+                group-hover:scale-110
+                "
+              />
 
-            transition-transform duration-300 ease-in-out
-            group-hover:scale-105
-            cursor-pointer
-            "
-          />
+              {/* Adaptive Overlay */}
+              <div
+                className="
+                absolute
+                inset-0
+                bg-gradient-to-t
+                from-black/70
+                via-black/30
+                to-transparent
+                opacity-80
+                transition-opacity
+                duration-500
+                group-hover:opacity-100
+                "
+              />
 
-          <h2 className="pt-4 text-lg font-medium">Photography</h2>
-        </div>
-
-        {/* CARD 3 */}
-        <div
-          className="
-          flex flex-col items-center justify-center
-
-          p-8
-
-          w-full
-          aspect-[3/4]
-
-          group
-          "
-        >
-          <img
-            src={drone_work}
-            alt="Prakashit doing drone footage work"
-            className="
-            w-full h-full
-            object-cover
-
-            transition-transform duration-300 ease-in-out
-            group-hover:scale-105
-            cursor-pointer
-            "
-          />
-
-          <h2 className="pt-4 text-lg font-medium">Drone Footage</h2>
+              {/* Title */}
+              <div
+                className="
+                absolute
+                bottom-0
+                left-0
+                right-0
+                flex
+                justify-center
+                pb-8
+                translate-y-10
+                opacity-0
+                transition-all
+                duration-500
+                ease-out
+                group-hover:translate-y-0
+                group-hover:opacity-100
+                max-sm:translate-y-0
+                max-sm:opacity-100
+                "
+              >
+                <h2
+                  className="
+                  text-white
+                  text-2xl
+                  font-semibold
+                  tracking-wide
+                  backdrop-blur-sm
+                  bg-black/40
+                  px-6
+                  py-2
+                  rounded-full
+                  "
+                >
+                  {work.title}
+                </h2>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </section>
   );
 };
 
-export default Work_Section;
+export default WorkSection;
