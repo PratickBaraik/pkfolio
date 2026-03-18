@@ -52,7 +52,8 @@ const Contact: React.FC = () => {
     <section className="w-full py-16 bg-primary transition-colors duration-300">
       {/* Container */}
       <div className="mx-auto max-w-7xl px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+        {/* ✅ Updated Grid Ratio */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-stretch">
           {/* ================= IMAGE ================= */}
           <div className="w-full h-full">
             <picture>
@@ -70,9 +71,9 @@ const Contact: React.FC = () => {
           </div>
 
           {/* ================= CONTENT ================= */}
-          <div className="flex flex-col gap-10 h-full justify-between">
-            {/* TEXT */}
-            <div className="text-center lg:text-left">
+          <div className="flex flex-col gap-10 h-full justify-between items-center lg:items-start">
+            {/* ================= TEXT ================= */}
+            <div className="text-center lg:text-left max-w-lg">
               <h2
                 className="
                   text-3xl md:text-4xl
@@ -96,11 +97,14 @@ const Contact: React.FC = () => {
               </p>
             </div>
 
-            {/* FORM */}
+            {/* ================= FORM ================= */}
             <form
               onSubmit={handleSubmit}
               className="
                 flex flex-col gap-6
+
+                w-full max-w-lg
+                mx-auto lg:mx-0
 
                 bg-surface
                 border border-border

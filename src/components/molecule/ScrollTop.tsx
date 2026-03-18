@@ -2,21 +2,27 @@ import { useEffect, useState } from "react";
 import TopArrow from "./topArrow.png";
 
 /**
- * ScrollToTop Button
- *
- * Improvements:
- * - Very high z-index to avoid stacking behind sections
- * - Fixed positioning for global overlay behavior
- * - Smooth appear/disappear animation
- * - Minor performance and code cleanup
+ * ScrollToTop Button (Refined)
+ * - Clean styling (no heavy gradients)
+ * - Smooth motion system
+ * - Lightweight scroll listener
+ * - Consistent with design system
  */
 
 const ScrollToTop = ({ showAfter = 800 }) => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      setVisible(window.scrollY > showAfter);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setVisible(window.scrollY > showAfter);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -36,45 +42,37 @@ const ScrollToTop = ({ showAfter = 800 }) => {
       onClick={scrollToTop}
       aria-label="Scroll to top"
       className={`
-        fixed
-        bottom-[20px] right-[20px]
-        md:bottom-[50px] md:right-[30px]
+        fixed z-50
+        bottom-6 right-6
+        md:bottom-10 md:right-10
 
-        w-[45px] h-[45px]
-        md:w-[50px] md:h-[50px]
-
-        rounded-full
+        w-11 h-11 md:w-12 md:h-12
 
         flex items-center justify-center
+        rounded-full
 
-        text-white
+        bg-surface border border-border
+        shadow-md hover:shadow-lg
 
-        bg-gradient-to-br from-[#28292b] to-[#949396]
+        transition-all duration-300 ease-out
 
-        shadow-[0_4px_12px_rgba(0,0,0,0.3)]
-
-        transition-all duration-300
-
-        hover:scale-110
-        hover:shadow-[0_6px_20px_rgba(0,0,0,0.4)]
-
-        z-[9999]
+        hover:-translate-y-1
+        active:scale-95
 
         ${
           visible
-            ? "opacity-100 visible translate-y-0"
-            : "opacity-0 invisible translate-y-2"
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-3 pointer-events-none"
         }
       `}
     >
       <img
         src={TopArrow}
-        alt="scroll to top icon"
+        alt="Scroll to top"
         className={`
-          w-[20px]
-          h-[20px]
+          w-4 h-4 md:w-5 md:h-5
           transition-transform duration-300
-          ${visible ? "translate-y-0" : "translate-y-1"}
+          group-hover:-translate-y-0.5
         `}
       />
     </button>

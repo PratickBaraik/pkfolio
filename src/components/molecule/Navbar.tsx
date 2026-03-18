@@ -14,35 +14,24 @@ interface NavbarProps {
 }
 
 /* ================================
-   BRAND COMPONENT (UPGRADED)
+   BRAND COMPONENT (ALIGNED WITH FOOTER)
 ================================ */
 const Brand = ({ brand }: { brand: string }) => (
-  <div className="flex items-center gap-3 group">
-    <div
+  <div className="flex items-center gap-3">
+    <img
+      src={logo}
+      alt="Prakashit Kujur logo"
       className="
-      relative
-      rounded-full
-      p-0.75
-
-      bg-logo
-      logo-ring
-
-      transition-all duration-300
-      group-hover:scale-105
-      group-hover:shadow-medium
-      "
-    >
-      <img
-        src={logo}
-        alt="prakashit kujur brand logo"
-        className="
-        w-[clamp(42px,3vw,52px)]
+        w-11 md:w-12
         aspect-square
         rounded-full
-        object-cover
-        "
-      />
-    </div>
+        bg-white
+        p-1
+        shadow-md
+        transition-transform duration-300
+        hover:scale-[1.03]
+      "
+    />
 
     <span className="text-lg font-semibold tracking-tight text-text-primary">
       {brand}
@@ -80,8 +69,8 @@ const Navbar: React.FC<NavbarProps> = ({ links, brand = "Brand" }) => {
   return (
     <>
       {/* NAVBAR */}
-      <nav className="sticky top-0 z-50 w-full border-b border-border bg-primary/80 backdrop-blur-lg">
-        <div className="mx-auto flex h-17.5 max-w-7xl items-center justify-between px-6">
+      <nav className="sticky top-0 z-50 w-full border-b border-border bg-primary/80 backdrop-blur-md">
+        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
           <Link to="/">
             <Brand brand={brand} />
           </Link>
@@ -100,12 +89,13 @@ const Navbar: React.FC<NavbarProps> = ({ links, brand = "Brand" }) => {
                       ${
                         active
                           ? "text-text-primary"
-                          : "text-text-secondary hover:text-accent"
+                          : "text-text-secondary hover:text-text-primary"
                       }
                       after:absolute after:-bottom-1 after:left-0
                       after:h-0.5 after:w-0
                       after:bg-accent
-                      after:transition-all hover:after:w-full`}
+                      after:transition-all duration-300
+                      hover:after:w-full`}
                     >
                       {link.label}
                     </Link>
@@ -114,9 +104,16 @@ const Navbar: React.FC<NavbarProps> = ({ links, brand = "Brand" }) => {
               })}
             </ul>
 
+            {/* THEME BUTTON */}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg bg-secondary text-text-primary transition hover:scale-105"
+              className="
+                p-2 rounded-lg
+                bg-secondary
+                text-text-primary
+                transition-all duration-200
+                hover:scale-[1.05]
+              "
             >
               {isDark ? <Sun size={18} /> : <Moon size={18} />}
             </button>
@@ -171,7 +168,7 @@ const Navbar: React.FC<NavbarProps> = ({ links, brand = "Brand" }) => {
                   ${
                     active
                       ? "text-text-primary"
-                      : "text-text-secondary hover:text-accent"
+                      : "text-text-secondary hover:text-text-primary"
                   }`}
                 >
                   {link.label}
