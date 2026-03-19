@@ -182,7 +182,6 @@ const Contact: React.FC = () => {
               className="
                 mt-4 mx-auto
                 px-8 py-3
-                rounded-full
                 bg-accent
                 text-accent-foreground
                 font-semibold

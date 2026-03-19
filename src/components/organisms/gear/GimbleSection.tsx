@@ -86,22 +86,31 @@ const GimbleSection: React.FC = () => {
             <div>
               <button
                 className="
-                mt-2
-                inline-flex items-center justify-center
+    mt-2
+    inline-flex items-center justify-center
 
-                px-6 py-3
-                rounded-lg
+    px-6 py-3
+    rounded-xl
 
-                bg-white/10
-                text-text-primary
+    /* BASE (light mode) */
+    bg-bg-secondary
+    text-text-primary
+    border border-border
 
-                backdrop-blur-md
-                border border-white/20
+    /* DEPTH */
+    shadow-soft
+    hover:shadow-medium
 
-                transition-all duration-300
-                hover:bg-white/20
-                hover:scale-[1.03]
-                "
+    /* INTERACTION */
+    transition-all duration-300
+    hover:-translate-y-0.5
+    active:scale-95
+
+    /* DARK MODE ENHANCEMENT */
+    dark:bg-white/5
+    dark:border-white/10
+    dark:hover:bg-white/10
+  "
               >
                 Know More
               </button>
