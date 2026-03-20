@@ -180,16 +180,17 @@ const Contact: React.FC = () => {
             <button
               type="submit"
               className="
-                mt-4 mx-auto
-                px-8 py-3
-                bg-accent
-                text-accent-foreground
-                font-semibold
-                tracking-wide
-                hover:opacity-90
-                active:scale-95
-                transition-all duration-200
-              "
+  mt-4 self-center
+  px-8 py-3
+
+  bg-zinc-50 text-zinc-900
+  dark:bg-zinc-800 dark:text-zinc-100
+
+  border border-zinc-200
+  dark:border-zinc-700
+
+  font-semibold tracking-wide
+"
             >
               Send Message
             </button>
