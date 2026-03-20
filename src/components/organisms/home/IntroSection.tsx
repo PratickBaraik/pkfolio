@@ -60,9 +60,8 @@ const IntroSection = () => {
             "
           >
             I craft visual stories that capture emotion, atmosphere, and
-            meaning. From documentaries and travel films to weddings and brand
-            visuals, every frame is designed to reflect the unique essence of
-            the moment.
+            meaning. From documentaries and travel films and brand visuals,
+            every frame is designed to reflect the unique essence of the moment.
           </p>
 
           <p

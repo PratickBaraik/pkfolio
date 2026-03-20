@@ -66,6 +66,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/about" className={navLinkClass}>
+                  About Me
+                </Link>
+              </li>
+              <li>
                 <Link to="/works" className={navLinkClass}>
                   Works
                 </Link>
@@ -73,11 +78,6 @@ const Footer = () => {
               <li>
                 <Link to="/gearlist" className={navLinkClass}>
                   Gearlist
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className={navLinkClass}>
-                  About Me
                 </Link>
               </li>
               <li>

@@ -101,65 +101,65 @@ const VideoSections: React.FC = () => {
   const sections: Section[] = [
     {
       id: "section-1",
-      title: "Travel Highlights",
+      title: "Documentaries",
       videos: [
         {
           id: "v1",
-          title: "Loop Bridge, Bagrakot",
-          url: "https://www.youtube.com/embed/X5NkZtdOwDg",
+          title: "The Love of Birth Place",
+          url: "https://www.youtube.com/embed/LDeO4wemfJ4?si=1i2dQQipEGQRKHvF",
         },
         {
           id: "v2",
-          title: "Beach Side",
-          url: "https://www.youtube.com/embed/Eoo4HzILB-M",
+          title: "The Art of Making Chyosam",
+          url: "https://www.youtube.com/embed/ZkTMdSoaOb4?si=0ltEJeWUWJWr18xX",
         },
       ],
     },
     {
       id: "section-2",
-      title: "Drone Shots",
+      title: "Music Videos",
       videos: [
         {
           id: "v3",
-          title: "Mountain Aerial View",
-          url: "https://www.youtube.com/embed/ysz5S6PUM-U",
+          title: "Need Your Love",
+          url: "https://www.youtube.com/embed/6tK6V5ZkyAU?si=iX6dcThJCgp2f4qc",
         },
         {
           id: "v4",
-          title: "City Drone Shot",
-          url: "https://www.youtube.com/embed/jNQXAC9IVRw",
+          title: "Soft Lips",
+          url: "https://www.youtube.com/embed/SMdfmuRl_v0?si=Dcls-sfOm5QB0P55",
         },
       ],
     },
     {
       id: "section-3",
-      title: "Cinematic Edits",
+      title: "Passion Projects",
       videos: [
         {
           id: "v5",
-          title: "Short Film Scene",
-          url: "https://www.youtube.com/embed/tgbNymZ7vqY",
+          title: "Inside My Creative Workspace",
+          url: "https://www.youtube.com/embed/JmV4lXwZ8PY?si=KWejhXW-ki6ohMs5",
         },
         {
           id: "v6",
-          title: "Night Cinematic",
-          url: "https://www.youtube.com/embed/oUFJJNQGwhk",
+          title: "Starting Again",
+          url: "https://www.youtube.com/embed/_eXcw4FKubI?si=X-JLUEnwGbZ3R_SZ",
         },
       ],
     },
     {
       id: "section-4",
-      title: "Nature & Landscape",
+      title: "Weddings",
       videos: [
         {
           id: "v7",
-          title: "Forest Walk",
-          url: "https://www.youtube.com/embed/ScMzIvxBSi4",
+          title: "Sunit & Nancy",
+          url: "https://www.youtube.com/embed/YpFOkyiyToE?si=hAIWpDqiuNbc0d4A",
         },
         {
           id: "v8",
-          title: "Waterfall View",
-          url: "https://www.youtube.com/embed/kXYiU_JCYtU",
+          title: "Juliet & Stephen",
+          url: "https://www.youtube.com/embed/7JpvYrWKNH4?si=4iej-vtEZbgIeDjs",
         },
       ],
     },

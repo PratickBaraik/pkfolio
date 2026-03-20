@@ -1,6 +1,6 @@
 import React from "react";
 import Section from "./Section";
-import { galleryData } from "../../../../../data/GalleryData";
+import { galleryData } from "../../../../data/GalleryData";
 
 const GallerySections: React.FC = () => {
   return (

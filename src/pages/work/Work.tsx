@@ -22,9 +22,9 @@ const Works: React.FC = () => {
    */
   const navLinks: NavItem[] = [
     { label: "Home", href: "/" },
+    { label: "About Me", href: "/about" },
     { label: "Works", href: "/works" },
     { label: "Gearlist", href: "/gearlist" },
-    { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
   ];
 

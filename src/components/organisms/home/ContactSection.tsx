@@ -87,7 +87,7 @@ const ContactSection = () => {
           tracking-tight
           "
         >
-          Let’s Create Something <span className="text-accent">Cinematic</span>
+          Let's Bring Your Story into life
         </h1>
 
         {/* DESCRIPTION */}
@@ -99,9 +99,9 @@ const ContactSection = () => {
           max-w-162.5
           "
         >
-          Whether it's a wedding, documentary, travel story, or brand visual,
-          every frame tells a story. Let’s collaborate and craft visuals that
-          feel authentic, emotional, and timeless.
+          Whether it's a documentary, travel story, or brand visual, every frame
+          tells a story. Let’s collaborate and craft visuals that feel
+          authentic, emotional, and timeless.
         </p>
 
         {/* CTA */}
@@ -114,9 +114,8 @@ const ContactSection = () => {
 
           font-medium
           tracking-wide
-
-          text-accent-foreground
-          bg-accent
+          bg-white
+          text-black
 
           shadow-medium
 
@@ -128,7 +127,7 @@ const ContactSection = () => {
           active:scale-[0.96]
           "
           >
-            Start Project
+            Contact Me
           </button>
         </Link>
       </div>

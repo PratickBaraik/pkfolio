@@ -99,7 +99,7 @@ const GearOverview: React.FC = () => {
     drop-shadow-[0_6px_30px_rgba(0,0,0,0.7)]
     "
         >
-          My Creative <span className="text-accent">Gear Setup</span>
+          My Creative Gear Setup
         </h1>
 
         {/* ================= DESCRIPTION ================= */}
@@ -139,7 +139,7 @@ const GearOverview: React.FC = () => {
           <br />
           <br />
           This streamlined setup ensures{" "}
-          <span className="text-accent font-medium">
+          <span className="font-medium">
             efficient, high-quality production
           </span>{" "}
           from capture through post-production.

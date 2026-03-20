@@ -1,8 +1,8 @@
 import type { Hobby } from "./Hobby.type";
 
-import Bike from "../asset/brands/brandOne.jpg";
-import Trekking from "../asset/brands/brandTwo.jpg";
-import Travel from "../asset/brands/brandThree.jpg";
+import Bike from "../asset/biking.jpg";
+import Trekking from "../asset/trekking.jpg";
+import Travel from "../asset/travel.jpg";
 
 export const hobbies: Hobby[] = [
   {

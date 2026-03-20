@@ -1,5 +1,6 @@
 import PosterSmall from "../assets/PosterSmall.png";
 import PosterLarge from "../assets/PosterLarge.png";
+import droneVide from "../assets/droneDemo.mp4";
 
 export default function VideoSection() {
   return (
@@ -122,8 +123,8 @@ export default function VideoSection() {
               "
             >
               <iframe
-                src="https://www.youtube.com/embed/Eoo4HzILB-M"
-                title="Beach Side"
+                src={droneVide}
+                title="River Side Drone Footage"
                 allowFullScreen
                 className="w-full h-full"
               />
@@ -138,7 +139,7 @@ export default function VideoSection() {
                 tracking-tight
               "
             >
-              Beach Side
+              River Side Drone Footage
             </h3>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import BlackPortrait from "./asset/blackPortrait.jpg";
+import BlackPortrait from "./asset/portrait.jpg";
 
 /* ================================
    Education Section Component

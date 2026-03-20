@@ -166,4 +166,14 @@
   .bg-overlay-strong {
     background: var(--overlay-strong);
   }
+
+  /* Apply globally to the entire app */
+  body {
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  /* Or apply to a specific class */
+  .classic-text {
+    font-family: "Times New Roman", Times, serif;
+  }
 }

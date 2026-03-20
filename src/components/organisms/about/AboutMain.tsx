@@ -16,10 +16,6 @@ const AboutMain: React.FC = () => {
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight text-text-primary">
             Hey, I am Prakashit Kujur
           </h1>
-
-          <p className="text-text-secondary text-base md:text-lg max-w-md leading-relaxed">
-            Visual storyteller specializing in videography and photography
-          </p>
         </div>
 
         {/* ================= IMAGE ================= */}
@@ -68,10 +64,7 @@ const AboutMain: React.FC = () => {
             {/* Card */}
             <div
               className="
-                bg-surface border border-border
-                rounded-2xl
                 p-6 md:p-8 pl-7 md:pl-9
-                shadow-sm md:shadow-md
                 hover:shadow-lg
                 transition-all duration-300 ease-out
               "
@@ -81,36 +74,19 @@ const AboutMain: React.FC = () => {
                   text-text-muted
                   leading-relaxed md:leading-loose
                   text-sm md:text-base
-                  text-center md:text-left
-                  tracking-[0.01em]
+                  text-center md:text-center
+                  tracking-[0.08em]
                 "
               >
-                A videographer and photographer focused on storytelling across{" "}
-                <strong className="text-text-primary font-semibold">
-                  documentaries, travel, and wedding projects
-                </strong>
-                .
-                <br />
-                <br />
-                My work captures the{" "}
-                <strong className="text-text-primary font-semibold">
-                  essence of people, places, and moments
-                </strong>
-                , blending{" "}
-                <strong className="text-text-primary font-semibold">
-                  creative vision
-                </strong>{" "}
-                with{" "}
-                <strong className="text-text-primary font-semibold">
-                  technical precision
-                </strong>
-                .
-                <br />
-                <br />I aim to create{" "}
-                <strong className="text-text-primary font-semibold">
-                  authentic and timeless visuals
-                </strong>{" "}
-                that bring ideas and stories to life.
+                A videographer and photographer specializing in storytelling. My
+                work spans Documentaries, travels and brand projects with a
+                focus on capturing the unique essence of each person, place, and
+                moment. Whether documenting or showcasing a landscape, or
+                crafting a brand's visual identity, I combine creativity with
+                technical skill to produce authentic and timeless visuals. If
+                you're looking to bring your vision to life through compelling
+                stories, let's connect and create something unforgettable
+                together!
               </p>
             </div>
           </div>

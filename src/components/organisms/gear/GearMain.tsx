@@ -57,35 +57,34 @@ const GearMain: React.FC = () => {
       {/* ================= BOTTOM CONTENT ================= */}
       <div
         className="
-        absolute
-        bottom-6 md:bottom-10
-        left-1/2 -translate-x-1/2
+  absolute
+  top-1/2 left-1/2
+  -translate-x-1/2 -translate-y-1/2
 
-        z-20
-        w-full
-        max-w-5xl
+  z-20
+  w-full
+  max-w-5xl
 
-        px-6
+  px-6
 
-        flex flex-col
-        items-center
-        gap-4
-        text-center
-        "
+  flex flex-col
+  items-center
+  gap-4
+  text-center
+"
       >
         {/* ===== Main Bottom Text ===== */}
         <p
           className="
           text-white
-          text-[clamp(1rem,1.2vw+0.6rem,1.4rem)]
+          text-[clamp(2.5rem,5vw,5rem)]
           md:text-lg
           tracking-wide
           leading-relaxed
           max-w-2xl
           "
         >
-          Crafted with precision.{" "}
-          <span className="text-accent">Built for storytelling.</span>
+          Crafted with precision. Built for storytelling.
         </p>
 
         {/* ===== Label (NO GLASS EFFECT) ===== */}

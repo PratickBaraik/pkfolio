@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import AudioPlayer from "./AudioPlayer";
+// import AudioPlayer from "./AudioPlayer";
 import { Link } from "react-router-dom";
 import bgImage from "./assets/mainCanvas.jpg";
 
@@ -102,6 +102,7 @@ const MainCanvas = () => {
             text-[clamp(1.2rem,1.6vw+0.5rem,2.2rem)]
             max-w-full
             md:max-w-[65%]
+            font-light
             "
           >
             Visual storyteller working across cinematography, photography, and
@@ -139,7 +140,7 @@ const MainCanvas = () => {
 
         {/* ================= AUDIO PLAYER ================= */}
         <div className="w-full flex justify-center md:justify-end">
-          <AudioPlayer />
+          {/* <AudioPlayer /> */}
         </div>
       </div>
     </section>

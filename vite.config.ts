@@ -3,11 +3,13 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 
 /*
-  Production-ready Vite configuration for:
-  - React + TypeScript
-  - Netlify deployment
-  - Atomic architecture structure
-  - Optimized bundle splitting
+  Vercel-optimized Vite configuration
+
+  Key optimizations:
+  - Clean bundle output (no unnecessary manual chunking)
+  - Fast builds for Vercel CI
+  - SPA routing compatibility
+  - Proper aliasing for scalable architecture
 */
 
 export default defineConfig({
@@ -15,30 +17,20 @@ export default defineConfig({
 
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      "@": path.resolve(__dirname, "./src"), // cleaner imports
     },
   },
 
   build: {
     outDir: "dist",
-    sourcemap: false,
-    chunkSizeWarningLimit: 1000,
+    sourcemap: false, // faster builds on Vercel
+    chunkSizeWarningLimit: 800,
 
     rollupOptions: {
       output: {
-        manualChunks(id) {
-          if (id.includes("node_modules")) {
-            if (id.includes("react-router-dom")) {
-              return "router";
-            }
-
-            if (id.includes("react")) {
-              return "react";
-            }
-
-            return "vendor";
-          }
-        },
+        // Let Vite handle smart chunking automatically
+        // More stable for Vercel edge caching
+        manualChunks: undefined,
       },
     },
   },
@@ -53,4 +45,7 @@ export default defineConfig({
     port: 4173,
     strictPort: true,
   },
+
+  // Important for Vercel deployments (SPA routing)
+  base: "/",
 });

@@ -88,9 +88,10 @@ const WorkSection = () => {
           text-secondary
         "
         >
-          Every photograph is more than an image—it is a moment preserved beyond
-          time. Through composition, light, and storytelling, each frame becomes
-          a visual narrative capturing emotion and atmosphere.
+          A visual body of work focused on cinematic photography and drone
+          cinematography, capturing compelling narratives through light,
+          composition, and perspective. Each frame is crafted to transform
+          moments into impactful visual stories.
         </p>
 
         {/* Grid */}
