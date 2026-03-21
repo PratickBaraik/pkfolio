@@ -24,15 +24,22 @@ const GearMain: React.FC = () => {
       "
     >
       {/* ================= BACKGROUND IMAGE ================= */}
-      <div
-        style={{ backgroundImage: `url(${bgImage})` }}
-        className={`
-          absolute inset-0
-          bg-cover bg-center bg-no-repeat
-          transition-all duration-1000 ease-out
-          ${loaded ? "opacity-100 scale-100" : "opacity-0 scale-105"}
-        `}
-      />
+      <div className="absolute inset-0 overflow-hidden">
+        <img
+          src={bgImage}
+          alt="Background"
+          loading="eager" // 🔥 use eager if this is above-the-fold (hero)
+          decoding="async"
+          onLoad={() => setLoaded(true)}
+          className={`
+      w-full h-full
+      object-cover object-center
+
+      transition-all duration-1000 ease-out
+      ${loaded ? "opacity-100 scale-100" : "opacity-0 scale-105"}
+    `}
+        />
+      </div>
 
       {/* ================= CINEMATIC OVERLAY ================= */}
       <div

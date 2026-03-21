@@ -13,21 +13,58 @@ const IntroSection = () => {
         px-6
 
         flex
-        flex-col
-        md:flex-row
+        flex-col md:flex-row
 
         items-center
         justify-between
 
-        text-center
-        md:text-left
+        text-center md:text-left
 
         gap-[clamp(2rem,6vw,6rem)]
         py-[clamp(2.5rem,6vw,5rem)]
         "
       >
+        {/* ================= IMAGE SECTION ================= */}
+        <div
+          className="
+          order-1 md:order-2   /* 🔥 mobile first, desktop swap */
+
+          shrink-0
+          w-[clamp(260px,35vw,520px)]
+          sm:w-[clamp(220px,70vw,400px)]
+
+          overflow-hidden
+          rounded-2xl
+          "
+        >
+          <img
+            src={selfPortrait}
+            alt="Self portrait of Prakashit Kujur"
+            loading="lazy"
+            onLoad={() => setLoaded(true)}
+            className={`
+              w-full
+              h-auto
+              object-cover
+              shadow-xl
+
+              transition-all duration-1000 ease-out
+
+              ${loaded ? "opacity-100 scale-100" : "opacity-0 scale-105"}
+            `}
+          />
+        </div>
+
         {/* ================= TEXT SECTION ================= */}
-        <div className="flex-1 max-w-2xl self-start">
+        <div
+          className="
+          order-2 md:order-1   /* 🔥 comes after image on mobile */
+
+          flex-1
+          max-w-2xl
+          self-start
+          "
+        >
           <h1
             className="
             font-semibold
@@ -77,35 +114,6 @@ const IntroSection = () => {
             looking to bring your vision to life through compelling visuals,
             let’s create something unforgettable together.
           </p>
-        </div>
-
-        {/* ================= IMAGE SECTION ================= */}
-        <div
-          className="
-          shrink-0
-          w-[clamp(260px,35vw,520px)]
-          sm:w-[clamp(220px,70vw,400px)]
-          mt-10 md:mt-0
-          overflow-hidden
-          rounded-2xl
-          "
-        >
-          <img
-            src={selfPortrait}
-            alt="Self portrait of Prakashit Kujur"
-            loading="lazy" /* ✅ browser-level lazy loading */
-            onLoad={() => setLoaded(true)}
-            className={`
-              w-full
-              h-auto
-              object-cover
-              shadow-xl
-
-              transition-all duration-1000 ease-out
-
-              ${loaded ? "opacity-100 scale-100" : "opacity-0 scale-105"}
-            `}
-          />
         </div>
       </div>
     </section>

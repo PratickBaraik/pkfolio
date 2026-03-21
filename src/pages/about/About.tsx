@@ -16,7 +16,7 @@ const About = () => {
   const navLinks: NavItem[] = [
     { label: "Home", href: "/" },
     { label: "About Me", href: "/about" },
-    { label: "Works", href: "/works" },
+    { label: "Body of Work", href: "/works" },
     { label: "Gearlist", href: "/gearlist" },
     { label: "Contact", href: "/contact" },
   ];

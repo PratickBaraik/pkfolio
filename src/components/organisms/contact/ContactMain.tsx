@@ -67,7 +67,7 @@ const Contact: React.FC = () => {
 
     const subject = "✨📩 New Connection from Portfolio Website 🚀";
     const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
-    const recipient = "your-email@example.com";
+    const recipient = "prakashitkujurs@gmail.com";
 
     const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(
       subject,

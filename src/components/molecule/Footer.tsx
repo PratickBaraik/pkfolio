@@ -98,7 +98,7 @@ const Footer = () => {
         >
           {/* FACEBOOK */}
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/share/1CfFB8voPs/?mibextid=wwXIfr"
             target="_blank"
             rel="noopener noreferrer"
             className="group"
@@ -112,7 +112,7 @@ const Footer = () => {
 
           {/* INSTAGRAM */}
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/prakashit_kujur?igsh=MTRmbzFtaTB6MzQ4dQ=="
             target="_blank"
             rel="noopener noreferrer"
             className="group"
@@ -126,7 +126,7 @@ const Footer = () => {
 
           {/* YOUTUBE */}
           <a
-            href="https://youtube.com"
+            href="https://youtube.com/@prakashit22?si=nQ2Ebwk5S9r148D1"
             target="_blank"
             rel="noopener noreferrer"
             className="group"
@@ -140,7 +140,7 @@ const Footer = () => {
 
           {/* LINKEDIN */}
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/prakashit-kujur?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
             target="_blank"
             rel="noopener noreferrer"
             className="group"
